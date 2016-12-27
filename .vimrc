@@ -23,6 +23,7 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle "ctrlpvim/ctrlp.vim"
 
 call neobundle#end()
 
@@ -46,7 +47,7 @@ set shiftwidth=2
 """"""""""""""""""""""""""
 let g:unite_enable_start_insert=1
 
-noremap <C-P> :Unite buffer<CR>
+"noremap <C-P> :Unite buffer<CR>
 noremap <C-N> :Unite -buffer-name=file file<CR>
 noremap <C-Z> :Unite file_mru<CR>
 noremap :uff :<C-u>UniteWithBufferDir file -buffer-name=file<CR>
@@ -70,10 +71,57 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 """"""""""""""""""""""""""
 colorscheme hybrid
 
-
 """"""""""""""""""""""""""
 "vim-indent-guides
 """"""""""""""""""""""""""
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
+
+""""""""""""""""""""""""""
+"tab setting | http://qiita.com/wadako111/items/755e753677dd72d8036d
+""""""""""""""""""""""""""
+" Anywhere SID.
+function! s:SID_PREFIX()
+  return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
+endfunction
+
+" Set tabline.
+function! s:my_tabline()  "{{{
+  let s = ''
+  for i in range(1, tabpagenr('$'))
+    let bufnrs = tabpagebuflist(i)
+    let bufnr = bufnrs[tabpagewinnr(i) - 1]  " first window, first appears
+    let no = i  " display 0-origin tabpagenr.
+    let mod = getbufvar(bufnr, '&modified') ? '!' : ' '
+    let title = fnamemodify(bufname(bufnr), ':t')
+    let title = '[' . title . ']'
+    let s .= '%'.i.'T'
+    let s .= '%#' . (i == tabpagenr() ? 'TabLineSel' : 'TabLine') . '#'
+    let s .= no . ':' . title
+    let s .= mod
+    let s .= '%#TabLineFill# '
+  endfor
+  let s .= '%#TabLineFill#%T%=%#TabLine#'
+    return s
+endfunction "}}}
+let &tabline = '%!'. s:SID_PREFIX() . 'my_tabline()'
+set showtabline=2
+
+" The prefix key.
+nnoremap    [Tag]   <Nop>
+nmap    t [Tag]
+
+" Tab jump / t1,t2,t3...
+for n in range(1, 9)
+  execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
+endfor
+
+" tc : new tab
+" tx : close tab
+" tn : next tab
+" tp : previous tab
+map <silent> [Tag]c :tablast <bar> tabnew<CR>
+map <silent> [Tag]x :tabclose<CR>
+map <silent> [Tag]n :tabnext<CR>
+map <silent> [Tag]p :tabprevious<CR>
 
