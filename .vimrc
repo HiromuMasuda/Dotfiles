@@ -41,6 +41,15 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+set noswapfile
+set clipboard=unnamed,autoselect
+
+""""""""""""""""""""""""""
+"Basic keybind
+""""""""""""""""""""""""""
+imap { {}<LEFT>
+imap [ []<LEFT>
+imap ( ()<LEFT>
 
 """"""""""""""""""""""""""
 "Unite.vim
