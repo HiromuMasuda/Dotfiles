@@ -45,6 +45,13 @@ set noswapfile
 set clipboard=unnamed,autoselect
 
 """"""""""""""""""""""""""
+"Basic keybind
+""""""""""""""""""""""""""
+imap { {}<LEFT>
+imap [ []<LEFT>
+imap ( ()<LEFT>
+
+""""""""""""""""""""""""""
 "Unite.vim
 """"""""""""""""""""""""""
 let g:unite_enable_start_insert=1
