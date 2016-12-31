@@ -50,6 +50,8 @@ set clipboard=unnamed,autoselect
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
+map <C-j> <esc>
+noremap! <C-j> <esc>
 
 """"""""""""""""""""""""""
 "Unite.vim
