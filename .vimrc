@@ -25,6 +25,7 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'rking/ag.vim'
+NeoBundle 'tpope/vim-surround'
 
 call neobundle#end()
 
@@ -44,6 +45,12 @@ set softtabstop=2
 set shiftwidth=2
 set noswapfile
 set clipboard=unnamed,autoselect
+set incsearch
+set showmatch
+set paste
+set wildmenu
+set showcmd
+set smartcase
 
 """"""""""""""""""""""""""
 "Basic keybind
@@ -135,5 +142,4 @@ endfor
 map <silent> [Tag]c :tablast <bar> tabnew<CR>
 map <silent> [Tag]x :tabclose<CR>
 map <silent> [Tag]n :tabnext<CR>
-map <silent> [Tag]p :tabprevious<CR>
-
+map <silent> [Tag]b :tabprevious<CR>
