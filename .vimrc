@@ -52,13 +52,16 @@ set showcmd
 set smartcase
 
 """"""""""""""""""""""""""
-"Basic keybind
+"Customize keybind
 """"""""""""""""""""""""""
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
 map <C-j> <esc>
 noremap! <C-j> <esc>
+noremap <space>h ^
+noremap <space>l $
+noremap <space>/ *
 
 """"""""""""""""""""""""""
 "Unite.vim
