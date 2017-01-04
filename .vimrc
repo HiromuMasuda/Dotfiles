@@ -23,7 +23,8 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle "ctrlpvim/ctrlp.vim"
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'rking/ag.vim'
 
 call neobundle#end()
 
