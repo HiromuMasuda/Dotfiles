@@ -39,6 +39,7 @@ NeoBundleCheck
 syntax enable
 set number
 set autoindent
+set smartindent
 set expandtab
 set tabstop=2
 set softtabstop=2
@@ -46,20 +47,21 @@ set shiftwidth=2
 set noswapfile
 set clipboard=unnamed,autoselect
 set incsearch
-set showmatch
-set paste
 set wildmenu
 set showcmd
 set smartcase
 
 """"""""""""""""""""""""""
-"Basic keybind
+"Customize keybind
 """"""""""""""""""""""""""
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
 map <C-j> <esc>
 noremap! <C-j> <esc>
+noremap <space>h ^
+noremap <space>l $
+noremap <space>/ *
 
 """"""""""""""""""""""""""
 "Unite.vim
