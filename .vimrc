@@ -48,6 +48,9 @@ set clipboard=unnamed,autoselect
 set incsearch
 set showmatch
 set paste
+set wildmenu
+set showcmd
+set smartcase
 
 """"""""""""""""""""""""""
 "Basic keybind
@@ -140,4 +143,3 @@ map <silent> [Tag]c :tablast <bar> tabnew<CR>
 map <silent> [Tag]x :tabclose<CR>
 map <silent> [Tag]n :tabnext<CR>
 map <silent> [Tag]b :tabprevious<CR>
-
