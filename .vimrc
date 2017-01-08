@@ -62,6 +62,8 @@ noremap! <C-j> <esc>
 noremap <space>h ^
 noremap <space>l $
 noremap <space>/ *
+let &t_SI = "\e]50;CursorShape=1\x7"
+let &t_EI = "\e]50;CursorShape=0\x7"
 
 """"""""""""""""""""""""""
 "Unite.vim
