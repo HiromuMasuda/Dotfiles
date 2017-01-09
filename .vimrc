@@ -51,7 +51,6 @@ set incsearch
 set wildmenu
 set showcmd
 set smartcase
-set tags=../tags
 
 """"""""""""""""""""""""""
 "Customize keybind
@@ -149,3 +148,9 @@ map <silent> [Tag]c :tablast <bar> tabnew<CR>
 map <silent> [Tag]x :tabclose<CR>
 map <silent> [Tag]n :tabnext<CR>
 map <silent> [Tag]b :tabprevious<CR>
+
+""""""""""""""""""""""""""
+"Ctags
+""""""""""""""""""""""""""
+set tags=../tags
+
