@@ -26,6 +26,7 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'szw/vim-tags'
 
 call neobundle#end()
 
@@ -50,6 +51,7 @@ set incsearch
 set wildmenu
 set showcmd
 set smartcase
+set tags=../tags
 
 """"""""""""""""""""""""""
 "Customize keybind
