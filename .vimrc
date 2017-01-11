@@ -51,6 +51,7 @@ set incsearch
 set wildmenu
 set showcmd
 set smartcase
+set whichwrap=b,s,h,l,<,>,[,]
 
 """"""""""""""""""""""""""
 "Customize keybind
