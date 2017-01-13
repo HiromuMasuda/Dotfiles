@@ -27,6 +27,7 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'szw/vim-tags'
+NeoBundle 'itchyny/lightline.vim'
 
 call neobundle#end()
 
@@ -155,3 +156,7 @@ map <silent> [Tag]b :tabprevious<CR>
 """"""""""""""""""""""""""
 set tags=../tags
 
+""""""""""""""""""""""""""
+"lightline.vim
+""""""""""""""""""""""""""
+set laststatus=2
