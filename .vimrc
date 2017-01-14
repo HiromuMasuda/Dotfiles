@@ -27,6 +27,8 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'szw/vim-tags'
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'bronson/vim-trailing-whitespace'
 
 call neobundle#end()
 
@@ -51,6 +53,7 @@ set incsearch
 set wildmenu
 set showcmd
 set smartcase
+set whichwrap=b,s,h,l,<,>,[,]
 
 """"""""""""""""""""""""""
 "Customize keybind
@@ -154,3 +157,14 @@ map <silent> [Tag]b :tabprevious<CR>
 """"""""""""""""""""""""""
 set tags=../tags
 
+""""""""""""""""""""""""""
+"lightline.vim
+""""""""""""""""""""""""""
+set laststatus=2
+
+""""""""""""""""""""""""""
+"vim-trailing-whitespace
+""""""""""""""""""""""""""
+if neobundle#tap('vim-trailing-whitespace')
+  let g:extra_whitespace_ignored_filetypes = ['unite']
+endif
