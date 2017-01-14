@@ -1,0 +1,36 @@
+[core]
+  excludesfile = /Users/HiromuMasuda/.gitignore_global
+
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+
+[user]
+  name = HiromuMasuda
+  email = hiromu.masuda.0228@gmail.com
+
+[push]
+  default = simple
+
+[alias]
+  a = add
+  aa = add .
+  c = commit
+  cm = commit -m
+  s = status
+  co = checkout
+  br = branch
+  d = diff
+  l = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+
+[color]
+  ui = true
