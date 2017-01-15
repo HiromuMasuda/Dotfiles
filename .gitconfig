@@ -20,7 +20,7 @@
   # status
   s  = status
   st = status
-  ss = status -s # with no info
+  ss = status -s
 
   # add
   a  = add
