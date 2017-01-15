@@ -32,7 +32,9 @@
   ca = commit --amend
 
   # pull/push/fetch
-  ft = fetch
+  ft  = fetch
+  pom = pull origin master
+  pod = pull origin development
 
   # checkout
   co  = checkout
@@ -46,7 +48,7 @@
   bra = branch -a
 
   # diff
-  d = diff
+  d  = diff
   dm = diff master
   dd = diff devekopment
   ds = diff --staged
