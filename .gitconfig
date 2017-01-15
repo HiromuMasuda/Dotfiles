@@ -17,15 +17,55 @@
   default = simple
 
 [alias]
-  a = add
+  # status
+  s  = status
+  st = status
+  ss = status -s
+
+  # add
+  a  = add
   aa = add .
-  c = commit
+
+  # commit
+  c  = commit
   cm = commit -m
-  s = status
-  co = checkout
-  br = branch
-  d = diff
+  ca = commit --amend
+
+  # pull/push/fetch
+  ft  = fetch
+  pom = pull origin master
+  pod = pull origin development
+
+  # checkout
+  co  = checkout
+  cob = checkout -b
+  coa = checkout .
+  com = checkout master
+  cod = checkout development
+
+  # branch
+  br  = branch
+  bra = branch -a
+
+  # diff
+  d  = diff
+  dm = diff master
+  dd = diff devekopment
+  ds = diff --staged
+  d1 = diff HEAD^
+  d2 = diff HEAD^^
+  d3 = diff HEAD^^^
+
+  # log
   l = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+
+  # reset
+  rh   = reset HEAD
+  rh1  = reset HEAD^
+  rsh  = reset --soft HEAD
+  rsh1 = reset --soft HEAD^
+  rhh  = reset --hard HEAD
+  rhh1 = reset --hard HEAD^
 
 [filter "lfs"]
   required = true
