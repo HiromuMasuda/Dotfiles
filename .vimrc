@@ -58,25 +58,52 @@ set whichwrap=b,s,h,l,<,>,[,]
 """"""""""""""""""""""""""
 "Customize keybind
 """"""""""""""""""""""""""
+"auto parenthesis
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
+
+"esc - to normal mode
 map <C-j> <esc>
 noremap! <C-j> <esc>
+
+"key movement
 noremap <space>h ^
 noremap <space>l $
 noremap <space>/ *
+
+"insert mode
 let &t_SI = "\e]50;CursorShape=1\x7"
 let &t_EI = "\e]50;CursorShape=0\x7"
+
+"window
+nnoremap s <Nop>
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
+nnoremap sJ <C-w>J
+nnoremap sK <C-w>K
+nnoremap sL <C-w>L
+nnoremap sH <C-w>H
+nnoremap sr <C-w>r
+nnoremap sr <C-w>r
+nnoremap s= <C-w>=
+nnoremap sw <C-w>w
+nnoremap so <C-w>_<C-w>|
+nnoremap sO <C-w>=
+nnoremap ss :<C-u>sp<CR>
+nnoremap sv :<C-u>vs<CR>
+nnoremap sq :<C-u>q<CR>
 
 """"""""""""""""""""""""""
 "Unite.vim
 """"""""""""""""""""""""""
 let g:unite_enable_start_insert=1
 
-"noremap <C-P> :Unite buffer<CR>
-noremap <C-N> :Unite -buffer-name=file file<CR>
-noremap <C-Z> :Unite file_mru<CR>
+noremap <C-P> :Unite buffer<CR>
+noremap <C-Z> :Unite -buffer-name=file file<CR>
+noremap <C-N> :Unite file_mru<CR>
 noremap :uff :<C-u>UniteWithBufferDir file -buffer-name=file<CR>
 
 au FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
