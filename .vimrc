@@ -54,6 +54,7 @@ set wildmenu
 set showcmd
 set smartcase
 set whichwrap=b,s,h,l,<,>,[,]
+set backspace=indent,eol,start
 
 """"""""""""""""""""""""""
 "Customize keybind
