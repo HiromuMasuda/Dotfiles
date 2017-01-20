@@ -57,7 +57,9 @@
   d3 = diff HEAD^^^
 
   # log
-  l = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+  l = log --graph --date=short --decorate=short --pretty=format:'%C(yellow)%h %Cgreen%cd %C(cyan)%cn%Cred%d %Creset%s'
+  lc = log --stat --decorate=short --pretty=format:'%C(yellow)%h %Cgreen%cr %C(cyan)%cn%Cred%d %Creset%s %C(cyan)%b'
+  lm = log --merges --pretty=format:'%C(yellow)%h %Cgreen%ci %C(cyan)%cn%Cred%d %Creset%s %C(cyan)%b'
 
   # reset
   rh   = reset HEAD
