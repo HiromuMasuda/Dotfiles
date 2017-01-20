@@ -29,6 +29,8 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'szw/vim-tags'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
 
 call neobundle#end()
 
