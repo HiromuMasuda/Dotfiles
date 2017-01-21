@@ -57,6 +57,7 @@ set showcmd
 set smartcase
 set whichwrap=b,s,h,l,<,>,[,]
 set backspace=indent,eol,start
+set vb t_vb=
 
 """"""""""""""""""""""""""
 "Customize keybind
