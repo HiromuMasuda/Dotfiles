@@ -29,6 +29,8 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'szw/vim-tags'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
 
 call neobundle#end()
 
@@ -55,6 +57,7 @@ set showcmd
 set smartcase
 set whichwrap=b,s,h,l,<,>,[,]
 set backspace=indent,eol,start
+set vb t_vb=
 
 """"""""""""""""""""""""""
 "Customize keybind
@@ -76,6 +79,9 @@ noremap <space>/ *
 "insert mode
 let &t_SI = "\e]50;CursorShape=1\x7"
 let &t_EI = "\e]50;CursorShape=0\x7"
+
+"change inner | ci to c
+nnoremap c ci
 
 "window
 nnoremap s <Nop>
