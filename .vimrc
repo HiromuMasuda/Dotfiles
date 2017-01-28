@@ -31,6 +31,11 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'taichouchou2/html5.vim'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'tpope/vim-fugitive'
 
 call neobundle#end()
 
