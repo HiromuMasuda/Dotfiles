@@ -207,3 +207,13 @@ set laststatus=2
 if neobundle#tap('vim-trailing-whitespace')
   let g:extra_whitespace_ignored_filetypes = ['unite']
 endif
+
+""""""""""""""""""""""""""
+"vim-fugitive
+""""""""""""""""""""""""""
+nnoremap <space>gs :<C-u>Gstatus<CR>
+nnoremap <space>ga :<C-u>Gwrite<CR>
+nnoremap <space>gc :<C-u>Gcommit<CR>
+nnoremap <space>gb :<C-u>Gblame<CR>
+nnoremap <space>gd :<C-u>Gdiff<CR>
+nnoremap <space>gl :<C-u>Glog<CR>
