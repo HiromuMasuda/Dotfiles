@@ -219,3 +219,10 @@ nnoremap <space>gc :<C-u>Gcommit<CR>
 nnoremap <space>gb :<C-u>Gblame<CR>
 nnoremap <space>gd :<C-u>Gdiff<CR>
 nnoremap <space>gl :<C-u>Glog<CR>
+
+""""""""""""""""""""""""""
+"gitv
+""""""""""""""""""""""""""
+nnoremap <space>gv :<C-u>Gitv<CR>
+nnoremap <space>gvf :<C-u>Gitv!<CR>
+autocmd FileType git :setlocal foldlevel=99
