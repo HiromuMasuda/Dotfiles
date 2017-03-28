@@ -35,6 +35,9 @@ NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'taichouchou2/html5.vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'gregsexton/gitv'
+NeoBundle 'airblade/vim-gitgutter'
 
 call neobundle#end()
 
@@ -203,3 +206,20 @@ set laststatus=2
 if neobundle#tap('vim-trailing-whitespace')
   let g:extra_whitespace_ignored_filetypes = ['unite']
 endif
+
+""""""""""""""""""""""""""
+"vim-fugitive
+""""""""""""""""""""""""""
+nnoremap <space>gs :<C-u>Gstatus<CR>
+nnoremap <space>ga :<C-u>Gwrite<CR>
+nnoremap <space>gc :<C-u>Gcommit<CR>
+nnoremap <space>gb :<C-u>Gblame<CR>
+nnoremap <space>gd :<C-u>Gdiff<CR>
+nnoremap <space>gl :<C-u>Glog<CR>
+
+""""""""""""""""""""""""""
+"gitv
+""""""""""""""""""""""""""
+nnoremap <space>gv :<C-u>Gitv<CR>
+nnoremap <space>gf :<C-u>Gitv!<CR>
+autocmd FileType git :setlocal foldlevel=99
