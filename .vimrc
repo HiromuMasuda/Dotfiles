@@ -224,5 +224,5 @@ nnoremap <space>gl :<C-u>Glog<CR>
 "gitv
 """"""""""""""""""""""""""
 nnoremap <space>gv :<C-u>Gitv<CR>
-nnoremap <space>gvf :<C-u>Gitv!<CR>
+nnoremap <space>gf :<C-u>Gitv!<CR>
 autocmd FileType git :setlocal foldlevel=99
