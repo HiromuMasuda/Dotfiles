@@ -35,6 +35,7 @@ NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'taichouchou2/html5.vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'airblade/vim-gitgutter'
 
 call neobundle#end()
 
