@@ -1,47 +1,40 @@
 """"""""""""""""""""""""""
-"NeoBundle
+"dein
 """"""""""""""""""""""""""
-if 0 | endif
-
-if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
-  endif
-
-  set runtimepath+=~/.vim/bundle/neobundle.vim
+if &compatible
+  set nocompatible
 endif
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+call dein#begin(expand('~/.vim/dein'))
 
-NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'rking/ag.vim'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'szw/vim-tags'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'mxw/vim-jsx'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'taichouchou2/html5.vim'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'cakebaker/scss-syntax.vim'
-NeoBundle 'airblade/vim-gitgutter'
+call dein#add('Shougo/dein.vim')
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/neomru.vim')
+call dein#add('scrooloose/nerdtree')
+call dein#add('tpope/vim-rails')
+call dein#add('tpope/vim-endwise')
+call dein#add('tomtom/tcomment_vim')
+call dein#add('w0ng/vim-hybrid')
+call dein#add('slim-template/vim-slim')
+call dein#add('nathanaelkane/vim-indent-guides')
+call dein#add('ctrlpvim/ctrlp.vim')
+call dein#add('rking/ag.vim')
+call dein#add('tpope/vim-surround')
+call dein#add('szw/vim-tags')
+call dein#add('itchyny/lightline.vim')
+call dein#add('bronson/vim-trailing-whitespace')
+call dein#add('pangloss/vim-javascript')
+call dein#add('mxw/vim-jsx')
+call dein#add('hail2u/vim-css3-syntax')
+call dein#add('taichouchou2/html5.vim')
+call dein#add('kchmck/vim-coffee-script')
+call dein#add('cakebaker/scss-syntax.vim')
+call dein#add('airblade/vim-gitgutter')
 
-call neobundle#end()
+call dein#end()
 
 filetype plugin indent on
-
-NeoBundleCheck
 
 """"""""""""""""""""""""""
 "Basic setting
@@ -197,10 +190,3 @@ set tags=../tags
 "lightline.vim
 """"""""""""""""""""""""""
 set laststatus=2
-
-""""""""""""""""""""""""""
-"vim-trailing-whitespace
-""""""""""""""""""""""""""
-if neobundle#tap('vim-trailing-whitespace')
-  let g:extra_whitespace_ignored_filetypes = ['unite']
-endif
