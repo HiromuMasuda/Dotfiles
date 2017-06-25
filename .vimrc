@@ -65,6 +65,9 @@ imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
 
+"command mode
+nnoremap ; :
+
 "esc - to normal mode
 map <C-j> <esc>
 noremap! <C-j> <esc>
