@@ -33,7 +33,7 @@ call dein#add('cakebaker/scss-syntax.vim')
 call dein#add('airblade/vim-gitgutter')
 call dein#add('szw/vim-tags')
 
-" MEMO: dein#check_install()
+" UPDATE_COMMAND: call dein#check_update()
 " run this command after changing plugin list
 
 call dein#end()
