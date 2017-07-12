@@ -31,8 +31,12 @@ call dein#add('taichouchou2/html5.vim')
 call dein#add('kchmck/vim-coffee-script')
 call dein#add('cakebaker/scss-syntax.vim')
 call dein#add('airblade/vim-gitgutter')
+call dein#add('szw/vim-tags')
 call dein#add('thinca/vim-ref')
 call dein#add('yuku-t/vim-ref-ri')
+
+" UPDATE_COMMAND: call dein#check_update()
+" run this command after changing plugin list
 
 call dein#end()
 
@@ -58,6 +62,7 @@ set smartcase
 set whichwrap=b,s,h,l,<,>,[,]
 set backspace=indent,eol,start
 set vb t_vb=
+set encoding=utf-8
 
 """"""""""""""""""""""""""
 "Customize keybind
