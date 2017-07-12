@@ -31,6 +31,8 @@ call dein#add('taichouchou2/html5.vim')
 call dein#add('kchmck/vim-coffee-script')
 call dein#add('cakebaker/scss-syntax.vim')
 call dein#add('airblade/vim-gitgutter')
+call dein#add('thinca/vim-ref')
+call dein#add('yuku-t/vim-ref-ri')
 
 call dein#end()
 
