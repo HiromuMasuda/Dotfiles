@@ -65,6 +65,10 @@ set encoding=utf-8
 """"""""""""""""""""""""""
 "Customize keybind
 """"""""""""""""""""""""""
+
+"map leader
+let mapleader = "\<Space>"
+
 "auto parenthesis
 imap { {}<LEFT>
 imap [ []<LEFT>
@@ -78,9 +82,9 @@ map <C-j> <esc>
 noremap! <C-j> <esc>
 
 "key movement
-noremap <space>h ^
-noremap <space>l $
-noremap <space>/ *
+noremap <Leader>h ^
+noremap <Leader>l $
+noremap <Leader>/ *
 
 "insert mode
 let &t_SI = "\e]50;CursorShape=1\x7"
@@ -105,6 +109,9 @@ nnoremap sO <C-w>=
 nnoremap ss :<C-u>sp<CR>
 nnoremap sv :<C-u>vs<CR>
 nnoremap sq :<C-u>q<CR>
+
+"refresh buffer
+nnoremap <Leader>br :bufdo e!<CR>
 
 """"""""""""""""""""""""""
 "Unite.vim
