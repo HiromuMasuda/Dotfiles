@@ -14,7 +14,7 @@
   email = hiromu.masuda.0228@gmail.com
 
 [push]
-  default = simple
+  default = current
 
 [alias]
   # status
