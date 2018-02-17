@@ -2,43 +2,62 @@
 "dein
 """"""""""""""""""""""""""
 if &compatible
-  set nocompatible
+  set nocompatible               " Be iMproved
 endif
-set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-call dein#begin(expand('~/.vim/dein'))
+" Required:
+set runtimepath+=/Users/hiromumasuda/.cache/dein/repos/github.com/Shougo/dein.vim
 
-call dein#add('Shougo/dein.vim')
-call dein#add('Shougo/unite.vim')
-call dein#add('Shougo/neomru.vim')
-call dein#add('scrooloose/nerdtree')
-call dein#add('tpope/vim-rails')
-call dein#add('tpope/vim-endwise')
-call dein#add('tomtom/tcomment_vim')
-call dein#add('w0ng/vim-hybrid')
-call dein#add('slim-template/vim-slim')
-call dein#add('nathanaelkane/vim-indent-guides')
-call dein#add('ctrlpvim/ctrlp.vim')
-call dein#add('rking/ag.vim')
-call dein#add('tpope/vim-surround')
-call dein#add('szw/vim-tags')
-call dein#add('itchyny/lightline.vim')
-call dein#add('bronson/vim-trailing-whitespace')
-call dein#add('pangloss/vim-javascript')
-call dein#add('mxw/vim-jsx')
-call dein#add('hail2u/vim-css3-syntax')
-call dein#add('taichouchou2/html5.vim')
-call dein#add('kchmck/vim-coffee-script')
-call dein#add('cakebaker/scss-syntax.vim')
-call dein#add('airblade/vim-gitgutter')
-call dein#add('szw/vim-tags')
+" Required:
+if dein#load_state('/Users/hiromumasuda/.cache/dein')
+  call dein#begin('/Users/hiromumasuda/.cache/dein')
 
-" UPDATE_COMMAND: call dein#check_update()
-" run this command after changing plugin list
+  " Let dein manage dein
+  " Required:
+  call dein#add('/Users/hiromumasuda/.cache/dein/repos/github.com/Shougo/dein.vim')
 
-call dein#end()
+  " Add or remove your plugins here:
+  call dein#add('Shougo/dein.vim')
+  call dein#add('Shougo/unite.vim')
+  call dein#add('Shougo/neomru.vim')
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('tpope/vim-rails')
+  call dein#add('tpope/vim-endwise')
+  call dein#add('tomtom/tcomment_vim')
+  call dein#add('w0ng/vim-hybrid')
+  call dein#add('slim-template/vim-slim')
+  call dein#add('nathanaelkane/vim-indent-guides')
+  call dein#add('ctrlpvim/ctrlp.vim')
+  call dein#add('rking/ag.vim')
+  call dein#add('tpope/vim-surround')
+  call dein#add('szw/vim-tags')
+  call dein#add('itchyny/lightline.vim')
+  call dein#add('bronson/vim-trailing-whitespace')
+  call dein#add('pangloss/vim-javascript')
+  call dein#add('mxw/vim-jsx')
+  call dein#add('hail2u/vim-css3-syntax')
+  call dein#add('taichouchou2/html5.vim')
+  call dein#add('kchmck/vim-coffee-script')
+  call dein#add('cakebaker/scss-syntax.vim')
+  call dein#add('airblade/vim-gitgutter')
+  call dein#add('szw/vim-tags')
 
+  " You can specify revision/branch/tag.
+  call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
+
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
+
+" Required:
 filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
 
 """"""""""""""""""""""""""
 "Basic setting
