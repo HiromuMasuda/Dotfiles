@@ -43,7 +43,7 @@ if dein#load_state('/Users/hiromumasuda/.cache/dein')
   call dein#add('szw/vim-tags')
 
   " You can specify revision/branch/tag.
-  call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
+  " call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
 
   " Required:
   call dein#end()
