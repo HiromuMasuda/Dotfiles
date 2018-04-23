@@ -228,5 +228,5 @@ set laststatus=2
   autocmd BufRead,BufNewFile *.mkd  set filetype=markdown
   autocmd BufRead,BufNewFile *.md  set filetype=markdown
   " Need: kannokanno/previm
-  nnoremap <silent> <C-b> :PrevimOpen<CR>
+  nnoremap <silent> <C-q> :PrevimOpen<CR>
   let g:vim_markdown_folding_disabled=1
