@@ -31,6 +31,11 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('itchyny/lightline.vim')
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('airblade/vim-gitgutter')
+  call dein#add('Shougo/deoplete.nvim')
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
 
   " Plugins for Golang
   call dein#add('fatih/vim-go')
@@ -234,3 +239,8 @@ let g:go_hightlight_build_constraints = 1
 
 autocmd FileType go :highlight goErr cterm=bold ctermfg=214
 autocmd FileType go :match goErr /\<err\>/
+
+""""""""""""""""""""""""""
+"Shougo/deoplete.nvim
+""""""""""""""""""""""""""
+let g:deoplete#enable_at_startup = 1
