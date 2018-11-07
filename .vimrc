@@ -16,7 +16,7 @@ if dein#load_state('$HOME/.cache/dein')
   " Required:
   call dein#add('$HOME/.cache/dein/repos/github.com/Shougo/dein.vim')
 
-  " Plugins
+  " Basic Plugins
   call dein#add('Shougo/dein.vim')
   call dein#add('Shougo/unite.vim')
   call dein#add('Shougo/neomru.vim')
@@ -32,12 +32,14 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('airblade/vim-gitgutter')
 
-  " Plugins which is not used
+  " Plugins for Golang
+  call dein#add('fatih/vim-go')
+
+  " Plugins for Rails
   "call dein#add('tpope/vim-rails')
   "call dein#add('tpope/vim-endwise')
   "call dein#add('slim-template/vim-slim')
   "call dein#add('pangloss/vim-javascript')
-  "call dein#add('mxw/vim-jsx')
   "call dein#add('hail2u/vim-css3-syntax')
   "call dein#add('kchmck/vim-coffee-script')
   "call dein#add('cakebaker/scss-syntax.vim')
@@ -219,3 +221,16 @@ set tags=../tags
 "lightline.vim
 """"""""""""""""""""""""""
 set laststatus=2
+
+""""""""""""""""""""""""""
+"fatih/vim-go
+""""""""""""""""""""""""""
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_hightlight_interfaces = 1
+let g:go_hightlight_operators = 1
+let g:go_hightlight_build_constraints = 1
+
+autocmd FileType go :highlight goErr cterm=bold ctermfg=214
+autocmd FileType go :match goErr /\<err\>/
