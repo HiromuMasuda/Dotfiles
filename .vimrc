@@ -16,16 +16,13 @@ if dein#load_state('$HOME/.cache/dein')
   " Required:
   call dein#add('$HOME/.cache/dein/repos/github.com/Shougo/dein.vim')
 
-  " Add or remove your plugins here:
+  " Plugins
   call dein#add('Shougo/dein.vim')
   call dein#add('Shougo/unite.vim')
   call dein#add('Shougo/neomru.vim')
   call dein#add('scrooloose/nerdtree')
-  call dein#add('tpope/vim-rails')
-  call dein#add('tpope/vim-endwise')
   call dein#add('tomtom/tcomment_vim')
   call dein#add('w0ng/vim-hybrid')
-  call dein#add('slim-template/vim-slim')
   call dein#add('nathanaelkane/vim-indent-guides')
   call dein#add('ctrlpvim/ctrlp.vim')
   call dein#add('rking/ag.vim')
@@ -33,16 +30,17 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('szw/vim-tags')
   call dein#add('itchyny/lightline.vim')
   call dein#add('bronson/vim-trailing-whitespace')
-  call dein#add('pangloss/vim-javascript')
-  call dein#add('mxw/vim-jsx')
-  call dein#add('hail2u/vim-css3-syntax')
-  call dein#add('kchmck/vim-coffee-script')
-  call dein#add('cakebaker/scss-syntax.vim')
   call dein#add('airblade/vim-gitgutter')
-  call dein#add('szw/vim-tags')
-  call dein#add('plasticboy/vim-markdown')
-  call dein#add('kannokanno/previm')
-  call dein#add('tyru/open-browser.vim')
+
+  " Plugins which is not used
+  "call dein#add('tpope/vim-rails')
+  "call dein#add('tpope/vim-endwise')
+  "call dein#add('slim-template/vim-slim')
+  "call dein#add('pangloss/vim-javascript')
+  "call dein#add('mxw/vim-jsx')
+  "call dein#add('hail2u/vim-css3-syntax')
+  "call dein#add('kchmck/vim-coffee-script')
+  "call dein#add('cakebaker/scss-syntax.vim')
 
   " You can specify revision/branch/tag.
   " call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
@@ -221,12 +219,3 @@ set tags=../tags
 "lightline.vim
 """"""""""""""""""""""""""
 set laststatus=2
-
-""""""""""""""""""""""""""
-"markdown
-""""""""""""""""""""""""""
-  autocmd BufRead,BufNewFile *.mkd  set filetype=markdown
-  autocmd BufRead,BufNewFile *.md  set filetype=markdown
-  " Need: kannokanno/previm
-  nnoremap <silent> <C-q> :PrevimOpen<CR>
-  let g:vim_markdown_folding_disabled=1
