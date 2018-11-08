@@ -16,16 +16,13 @@ if dein#load_state('~/.cache/dein')
   " Required:
   call dein#add('~/.cache/dein')
 
-  " Add or remove your plugins here:
+  " Basic Plugins
   call dein#add('Shougo/dein.vim')
   call dein#add('Shougo/unite.vim')
   call dein#add('Shougo/neomru.vim')
   call dein#add('scrooloose/nerdtree')
-  call dein#add('tpope/vim-rails')
-  call dein#add('tpope/vim-endwise')
   call dein#add('tomtom/tcomment_vim')
   call dein#add('w0ng/vim-hybrid')
-  call dein#add('slim-template/vim-slim')
   call dein#add('nathanaelkane/vim-indent-guides')
   call dein#add('ctrlpvim/ctrlp.vim')
   call dein#add('rking/ag.vim')
@@ -33,16 +30,24 @@ if dein#load_state('~/.cache/dein')
   call dein#add('szw/vim-tags')
   call dein#add('itchyny/lightline.vim')
   call dein#add('bronson/vim-trailing-whitespace')
-  call dein#add('pangloss/vim-javascript')
-  call dein#add('mxw/vim-jsx')
-  call dein#add('hail2u/vim-css3-syntax')
-  call dein#add('kchmck/vim-coffee-script')
-  call dein#add('cakebaker/scss-syntax.vim')
   call dein#add('airblade/vim-gitgutter')
-  call dein#add('szw/vim-tags')
-  call dein#add('plasticboy/vim-markdown')
-  call dein#add('kannokanno/previm')
-  call dein#add('tyru/open-browser.vim')
+  call dein#add('Shougo/deoplete.nvim')
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
+
+  " Plugins for Golang
+  call dein#add('fatih/vim-go')
+
+  " Plugins for Rails
+  "call dein#add('tpope/vim-rails')
+  "call dein#add('tpope/vim-endwise')
+  "call dein#add('slim-template/vim-slim')
+  "call dein#add('pangloss/vim-javascript')
+  "call dein#add('hail2u/vim-css3-syntax')
+  "call dein#add('kchmck/vim-coffee-script')
+  "call dein#add('cakebaker/scss-syntax.vim')
 
   " You can specify revision/branch/tag.
   " call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
@@ -223,10 +228,19 @@ set tags=../tags
 set laststatus=2
 
 """"""""""""""""""""""""""
-"markdown
+"fatih/vim-go
 """"""""""""""""""""""""""
-  autocmd BufRead,BufNewFile *.mkd  set filetype=markdown
-  autocmd BufRead,BufNewFile *.md  set filetype=markdown
-  " Need: kannokanno/previm
-  nnoremap <silent> <C-q> :PrevimOpen<CR>
-  let g:vim_markdown_folding_disabled=1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_hightlight_interfaces = 1
+let g:go_hightlight_operators = 1
+let g:go_hightlight_build_constraints = 1
+
+autocmd FileType go :highlight goErr cterm=bold ctermfg=214
+autocmd FileType go :match goErr /\<err\>/
+
+""""""""""""""""""""""""""
+"Shougo/deoplete.nvim
+""""""""""""""""""""""""""
+let g:deoplete#enable_at_startup = 1
