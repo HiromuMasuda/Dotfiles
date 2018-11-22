@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/HiromuMasuda/.oh-my-zsh
+export ZSH=/Users/s05392/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -80,11 +80,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+# node
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
-# Python
-export PYENV_ROOT="${HOME}/.pyenv"
-export PATH="${PYENV_ROOT}/bin:$PATH"
-eval "$(pyenv init -)"
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
-# Perl
-eval "$(plenv init -)"
+# Golang
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin
