@@ -22,7 +22,6 @@ if dein#load_state('~/.cache/dein')
   call dein#add('Shougo/neomru.vim')
   call dein#add('scrooloose/nerdtree')
   call dein#add('tomtom/tcomment_vim')
-  call dein#add('w0ng/vim-hybrid')
   call dein#add('nathanaelkane/vim-indent-guides')
   call dein#add('ctrlpvim/ctrlp.vim')
   call dein#add('rking/ag.vim')
@@ -32,6 +31,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('airblade/vim-gitgutter')
   call dein#add('Shougo/deoplete.nvim')
+  call dein#add('morhetz/gruvbox')
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
@@ -159,9 +159,9 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 """"""""""""""""""""""""""
-"vim-hybrid / color theme
+"color theme
 """"""""""""""""""""""""""
-colorscheme hybrid
+colorscheme gruvbox
 
 """"""""""""""""""""""""""
 "vim-indent-guides
