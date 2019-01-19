@@ -38,10 +38,13 @@ if dein#load_state('~/.cache/dein')
   endif
 
   " Plugins for Golang
-  call dein#add('fatih/vim-go')
+  "call dein#add('fatih/vim-go')
 
   " Plugins for Scala
-  call dein#add('derekwyatt/vim-scala')
+  "call dein#add('derekwyatt/vim-scala')
+
+  " Plugins for Vue
+  " call dein#add('posva/vim-vue')
 
   " Plugins for Rails
   "call dein#add('tpope/vim-rails')
