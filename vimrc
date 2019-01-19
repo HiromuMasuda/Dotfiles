@@ -43,6 +43,9 @@ if dein#load_state('~/.cache/dein')
   " Plugins for Scala
   "call dein#add('derekwyatt/vim-scala')
 
+  " Plugins for Vue
+  " call dein#add('posva/vim-vue')
+
   " Plugins for Rails
   "call dein#add('tpope/vim-rails')
   "call dein#add('tpope/vim-endwise')
