@@ -17,7 +17,6 @@ if dein#load_state('~/.cache/dein')
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " Basic Plugins
-  call dein#add('Shougo/dein.vim')
   call dein#add('Shougo/unite.vim')
   call dein#add('Shougo/neomru.vim')
   call dein#add('scrooloose/nerdtree')
@@ -30,33 +29,11 @@ if dein#load_state('~/.cache/dein')
   call dein#add('itchyny/lightline.vim')
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('airblade/vim-gitgutter')
-  call dein#add('Shougo/deoplete.nvim')
   call dein#add('morhetz/gruvbox')
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
   endif
-
-  " Plugins for Golang
-  "call dein#add('fatih/vim-go')
-
-  " Plugins for Scala
-  "call dein#add('derekwyatt/vim-scala')
-
-  " Plugins for Vue
-  " call dein#add('posva/vim-vue')
-
-  " Plugins for Rails
-  "call dein#add('tpope/vim-rails')
-  "call dein#add('tpope/vim-endwise')
-  "call dein#add('slim-template/vim-slim')
-  "call dein#add('pangloss/vim-javascript')
-  "call dein#add('hail2u/vim-css3-syntax')
-  "call dein#add('kchmck/vim-coffee-script')
-  "call dein#add('cakebaker/scss-syntax.vim')
-
-  " You can specify revision/branch/tag.
-  " call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
 
   " Required:
   call dein#end()
@@ -304,7 +281,3 @@ let g:go_hightlight_build_constraints = 1
 autocmd FileType go :highlight goErr cterm=bold ctermfg=214
 autocmd FileType go :match goErr /\<err\>/
 
-""""""""""""""""""""""""""
-"Shougo/deoplete.nvim
-""""""""""""""""""""""""""
-let g:deoplete#enable_at_startup = 1

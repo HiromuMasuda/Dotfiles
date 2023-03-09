@@ -10,8 +10,8 @@
   trustExitCode = true
 
 [user]
-	name = HiromuMasuda
-	email = hiromu.masuda.0228@gmail.com
+  name = HiromuMasuda
+  email = hiromu.masuda.0228@gmail.com
 
 [push]
   default = current
