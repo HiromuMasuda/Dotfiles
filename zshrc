@@ -5,24 +5,27 @@ export ZSH=~/.oh-my-zsh
 ZSH_THEME="avit"
 
 # PATH
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-# Golang
-# export GOPATH=$HOME/.go
-# export PATH=$PATH:$GOPATH/bin
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
-# nvm-node
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# goenv
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
 
-# Python
-# export PYENV_ROOT="${HOME}/.pyenv"
-# export PATH="${PYENV_ROOT}/bin:$PATH"
-# eval "$(pyenv init -)"
+# golang
+#export PATH="$GOROOT/bin:$PATH"
+#export PATH="$PATH:$GOPATH/bin"
 
-# Java
-# export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+# Firebase
+export GOOGLE_APPLICATION_CREDENTIALS=$HOME/Projects/private_key/ecpower-production.json
+
+# Google Cloud SDK
+source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
